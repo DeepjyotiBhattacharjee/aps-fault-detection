@@ -1,5 +1,11 @@
-import pymongo
+from sensor.logger import logging
+from sensor.exception import SensorException
+from sensor.utils import get_collection_as_dataframe
+import sys
 
-client = pymongo.MongoClient("mongodb+srv://deepjyotib:Snape%401993@cluster0.3ykmmry.mongodb.net/?retryWrites=true&w=majority")
-
-# database = client['aps']
+    
+if __name__=="__main__":
+    try:
+        get_collection_as_dataframe(database_name="aps",collection_name="sensor")
+    except Exception as e:
+        logging.error(e)
