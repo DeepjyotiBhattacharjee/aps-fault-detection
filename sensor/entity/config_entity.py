@@ -4,6 +4,10 @@ import sys
 from sensor.logger import logging
 from sensor.exception import SensorException
 
+'''
+This is the config entity
+'''
+
 FILE_NAME = "sensor.csv"
 TRAIN_FILE_NAME = "train.csv"
 TEST_FILE_NAME = "test.csv"
